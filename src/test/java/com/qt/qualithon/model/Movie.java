@@ -14,6 +14,8 @@ public class Movie{
     String director;
     List<String> genres;
     List<String> writers;
+    String imdbRating;
+    String MovieRated;
 
     public Movie(){
         this.genres = new ArrayList<>();
@@ -27,6 +29,14 @@ public class Movie{
      **/
     public void setTitle(String title){
         this.title = title;
+    }
+
+    public void setMovieRated(String rated){
+        this.MovieRated = rated;
+    }
+
+    public String MovieRated(){
+        return this.MovieRated;
     }
     /**
      * get movie title
@@ -141,6 +151,12 @@ public class Movie{
         return this.writers;
     }
 
+    public void setimdbRating(String rating){
+        this.imdbRating = rating;
+    }
+    public String imdbRating(){
+        return this.imdbRating;
+    }
     /**
      * a pretty formated representation of movie metadata
      *
