@@ -15,7 +15,7 @@ public class Movie{
     List<String> genres;
     List<String> writers;
     String imdbRating;
-    String MovieRated;
+    String MaturityRating;
 
     public Movie(){
         this.genres = new ArrayList<>();
@@ -31,12 +31,12 @@ public class Movie{
         this.title = title;
     }
 
-    public void setMovieRated(String rated){
-        this.MovieRated = rated;
+    public void setMaturityMovieRating(String rated){
+        this.MaturityRating = rated;
     }
 
-    public String MovieRated(){
-        return this.MovieRated;
+    public String MaturityMovieRating(){
+        return this.MaturityRating;
     }
     /**
      * get movie title
@@ -166,6 +166,8 @@ public class Movie{
       return "Title: " + this.title + " (" + this.releaseYear + ")" + "\n"
             +"Director: " + this.director + "\n"
             +"Genres: " + String.join(",", this.genres) + "\n" 
-            +"Writers: " + String.join(",", this.writers); 
+            +"Writers: " + String.join(",", this.writers)  + "\n" 
+            +"MaturutyScore: " + String.join(",", this.MaturityMovieRating()) + "\n" 
+            +"imbdRating: " + String.join(",", this.imdbRating); 
     }
 }

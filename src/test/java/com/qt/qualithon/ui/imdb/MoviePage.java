@@ -114,7 +114,7 @@ public class MoviePage extends Page{
             ) 
         ).getText();
     }
-    public String MovieRate(){
+    public String MaturityMovieRated(){
         return this.testSession.driverWait().until(
             ExpectedConditions.presenceOfElementLocated(
                By.cssSelector("ul[data-testid='hero-title-block__metadata'] li:nth-child(2) a")

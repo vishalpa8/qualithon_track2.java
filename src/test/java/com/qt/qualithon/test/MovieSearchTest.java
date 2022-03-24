@@ -162,7 +162,8 @@ public class MovieSearchTest {
         // get Movie metadata from http://www.omdbapi.com/
 
         Movie movie = new OMDbAPI().getMovie(title);    
-        assertThat(movieOnImdbWeb.MovieRating()).isEqualTo(movie.imdbRating());
+        assertThat(movieOnImdbWeb.MaturityMovieRated()).isEqualTo(movie.MaturityMovieRating());
+       
     }
 
     /**
@@ -180,6 +181,6 @@ public class MovieSearchTest {
         .firstMovieResult();
         
         Movie movie = new OMDbAPI().getMovie(title);
-        assertThat(movieOnImdbWeb.MovieRate()).isEqualTo(movie.MovieRated());
+        assertThat(movieOnImdbWeb.MovieRating()).isEqualTo(movie.imdbRating());
     }
 }
